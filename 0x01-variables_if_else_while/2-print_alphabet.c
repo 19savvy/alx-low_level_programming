@@ -1,6 +1,7 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <stdio.h>
+
 /* more headers goes there */
 
 /**
@@ -10,13 +11,15 @@
 */
 int main(void)
 {
-	char low;
+	char letter;
 
-	if (low == 'a'; low <= 'z')
+	letter = 'a';
+
+	while (letter <= 'z')
 	{
-		low++;
-		putchar(low);
-		putchar("\n");
+		putchar(letter);
+		putchar('\n');
+		letter++;
 	}
 	return (0);
 }
