@@ -12,6 +12,7 @@
 int main(void)
 {
 	char numbers;
+	char letters;
 
 	numbers = '0';
 	while (numbers <= '9')
@@ -19,8 +20,6 @@ int main(void)
 		putchar(numbers);
 		numbers++;
 	}
-
-	char letters;
 
 	letters = 'a';
 	while (letters <= 'f')
