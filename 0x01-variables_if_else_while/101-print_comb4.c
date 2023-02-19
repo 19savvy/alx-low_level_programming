@@ -11,7 +11,7 @@
 */
 int main(void)
 {
-	char num1, num2, num3;
+	int num1, num2, num3;
 
 	for (num1 = 0; num1 < 8; num1++)
 	{
