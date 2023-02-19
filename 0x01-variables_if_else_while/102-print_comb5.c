@@ -22,18 +22,18 @@ int main(void)
 			c = num2 / 10;
 			d = num2 % 10;
 			putchar('0' + a);
-			putcahr('0' + b);
-			putcahr(' ');
-			putcahr('0' + c);
-			putcahr('0' + d);
+			putchar('0' + b);
+			putchar(' ');
+			putchar('0' + c);
+			putchar('0' + d);
 			if (num1 != 98 || num2 != 99)
 			{
-				putcahr(',');
+				putchar(',');
 				putchar(' ');
 			}
 		}
 	}
-	putcahr('\n');
+	putchar('\n');
 	return (0);
 }
 
