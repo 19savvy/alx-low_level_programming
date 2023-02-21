@@ -14,4 +14,5 @@ void print_alphabet()
 		printf("%c",min);
 	}
 	printf("\n");
+	return;
 }
