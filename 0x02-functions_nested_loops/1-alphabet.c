@@ -3,6 +3,6 @@
 
 int main ()
 {
-	print_alphabets();
-	return (0);
+	print_alphabet();
+	return 0;
 }
