@@ -15,5 +15,4 @@ void print_alphabet()
 		min++;
 	}
 
-	return;
 }
