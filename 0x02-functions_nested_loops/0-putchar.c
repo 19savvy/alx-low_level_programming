@@ -5,9 +5,8 @@
 *
 *Return: 0
 */
-
 int main(void)
 {
-	putchar("_putchar()\n");
+	print_message();
 	return (0);
 }

@@ -1,4 +1,7 @@
-char putchar(char)
+#include <stdio.h>
+
+void print_mesage(void)
 {
-	return(char);
+	printf("_putchar\n");
+	return;
 }
