@@ -22,4 +22,4 @@ void print_alphabet(void)
 
 }
 
-#endif // ALPHA
+#endif
