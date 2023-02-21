@@ -1,7 +1,6 @@
 #ifndef ALPHA
 #define ALPHA
 #include <stdio.h>
-#include <stdio.h>
 
 /**
  * print_message - print a message
