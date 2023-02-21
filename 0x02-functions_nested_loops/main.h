@@ -6,12 +6,13 @@ void print_message(void)
 	return;
 }
 
-void print_alphabet(void)
+void print_alphabet()
 {
-	char min;
-	for (min = 'a'; min <= 'z'; min++)
+	char min = 'a';
+	while (min <= 'a')
 	{
 		printf("%c", min);
+		min++;
 	}
 
 	return;
