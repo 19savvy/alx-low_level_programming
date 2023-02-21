@@ -1,19 +1,25 @@
+#ifndef ALPHA
+#define ALPHA
 #include <stdio.h>
 
 void print_message(void)
 {
 	printf("_putchar\n");
-	return;
 }
 
 void print_alphabet(void)
 {
-	char min = 'a';
-	while (min <= 'z')
+	char letter = 'a';
+
+	while (letter <= 'z')
 	{
-		printf("%c", min);
-		min++;
-		return;
+
+		printf("%c", letter);
+		letter++;
+
 	}
+	printf("\n");
 
 }
+
+#endif // ALPHA
