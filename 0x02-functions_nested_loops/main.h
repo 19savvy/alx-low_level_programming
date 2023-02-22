@@ -1,7 +1,9 @@
-#ifndef ALPHA
-#define ALPHA
+#ifndef MAIN_H
+#define MAIN_H
 #include <stdio.h>
 
+void print_message(void);
+void print_alphabet(void);
 /**
  * print_message - print a message
  *
@@ -32,3 +34,4 @@ void print_alphabet(void)
 
 }
 #endif
+
