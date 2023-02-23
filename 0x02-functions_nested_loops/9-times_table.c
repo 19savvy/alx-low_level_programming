@@ -25,7 +25,7 @@ void times_table(void)
 
 
 			}
-	         	else
+			else
 			{
 				if (b != 0)
 				{
