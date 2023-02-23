@@ -10,12 +10,12 @@ void print_times_table(int n)
 {
 	int num, mlt, prd;
 
-	if (n >= 0 && n <=15)
+	if (n >= 0 && n <= 15)
 	{
 		for (num = 0; num <= n; num++)
 		{
 			_putchar('0');
-			for (mlt = 0; mlt <= n; mlt++)
+			for (mlt = 1; mlt <= n; mlt++)
 			{
 				_putchar(',');
 				_putchar(' ');
