@@ -14,7 +14,7 @@ void times_table(void)
 		for (b = 0; b <= 9; b++)
 		{
 			c = a * b;
-			if (a > 0)
+			if (c > 9)
 			{
 				d = c % 10;
 				e = (c - d) / 10;
@@ -25,7 +25,7 @@ void times_table(void)
 
 
 			}
-			else 
+	         	else
 			{
 				if (b != 0)
 				{
