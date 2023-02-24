@@ -12,6 +12,4 @@ void print_diagnal(int n);
 void print_square(int size);
 void print_triangles(int size);
 
-
-
 #endif /* MAIN_H */
