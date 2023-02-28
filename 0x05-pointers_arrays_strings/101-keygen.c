@@ -2,12 +2,6 @@
 #include <stdlib.h>
 #include <time.h>
 
-/* main - prints random passwords
- * @charset: contain the character set from which the password will be picked
- * @password_length: specifies the length of the password
- * return: alawys 0
- */
-
 int main(void)
 {
     /* Define the characters that can be used in the password */
@@ -31,3 +25,4 @@ int main(void)
 
     return 0;
 }
+
