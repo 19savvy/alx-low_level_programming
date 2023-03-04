@@ -12,8 +12,8 @@ int check_seperator(char c);
 int check_seperator(char c)
 {
 	int k = 0;
-	char seperators[] = {' ', '\t', '\n', ',', ';', '.', '!', '?',
-		'"','{','}','(',')'};
+	char seperators[13] = {' ', '\t', '\n',\
+	       	',', ';', '.', '!', '?','"','{','}','(',')'};
 
 	for (;k <= 12, k++)
 	{
