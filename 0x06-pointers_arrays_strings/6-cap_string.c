@@ -28,7 +28,7 @@ char *cap_string(char *s)
  * @c: an input character
  * Return: 1 if seperator, 0 otherwise
  */
-int check_seperators(char c)
+int check_seperator(char c)
 {
 	int k = 0;
 	char seperator[13] = { ' ', '\t', '\n', ',', ';', '.', '!', '?',
