@@ -1,4 +1,4 @@
-int check_seperators(char c);
+int check_seperator(char c);
 
 /**
  * cap_string - a function that capitalizes all words of a string.
@@ -14,7 +14,7 @@ char *cap_string(char *s)
 		if (i == 0 && (s[i] >= 'a' && s[i] <= 'z'))
 			s[i] -= 32;
 
-		if (check_seperators(s[i]) && (s[i + 1] >= 'a' && s[i + 1] <= 'z'))
+		if (check_seperator(s[i]) && (s[i + 1] >= 'a' && s[i + 1] <= 'z'))
 			s[i + 1] -= 32;
 		i++;
 	}
@@ -30,12 +30,12 @@ char *cap_string(char *s)
  */
 int check_seperators(char c)
 {
-	int i = 0;
-	char seperators[13] = { ' ', '\t', '\n', ',', ';', '.', '!', '?',
+	int k = 0;
+	char seperator[13] = { ' ', '\t', '\n', ',', ';', '.', '!', '?',
 		'"', '(', ')', '{', '}' };
-	for (; i < 13; i++)
+	for (; k < 13; k++)
 	{
-		if (c == seperators[i])
+		if (c == seperator[k])
 			return (1);
 	}
 	return (0);
