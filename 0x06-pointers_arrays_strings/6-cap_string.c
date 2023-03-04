@@ -1,4 +1,5 @@
 #include "main"
+int check_seperator(char c);
 
 /**
  * check_seperator - checks for Separators of words: 
@@ -28,11 +29,7 @@ int check_seperator(char c)
  * @s: An input string to capitalize letters
  * Return: pointer to s
  */
-
-int check_seperator(char c);
-
-
-char *cap_string(char *s)
+char *cap_string(char *);
 {
 	int i = 0;
 
