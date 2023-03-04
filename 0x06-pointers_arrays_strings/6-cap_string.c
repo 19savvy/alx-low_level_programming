@@ -24,18 +24,18 @@ char *cap_string(char *s)
 
 /**
  * check_seperators - Separators of words: space, tabulation, new line,
- * ,, ;, ., !, ?, \", (, ), {, and }
+ * ,, ;, ., !, ?, ", (, ), {, and }
  * @c: an input character
  * Return: 1 if seperator, 0 otherwise
  */
 int check_seperator(char c)
 {
-	int k = 0;
+	int i = 0;
 	char seperator[13] = { ' ', '\t', '\n', ',', ';', '.', '!', '?',
 		'"', '(', ')', '{', '}' };
-	for (; k < 13; k++)
+	for (; i < 13; i++)
 	{
-		if (c == seperator[k])
+		if (c == seperator[i])
 			return (1);
 	}
 	return (0);
