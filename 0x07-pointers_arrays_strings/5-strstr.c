@@ -2,29 +2,29 @@
 #include <stdio.h>
 
 /**
- * _strpbrk -  a function that searches a string for any of a set of bytes.
- * @s: an input string
- * @accept: an input character with to locate into string s
- * Return:  a pointer to the byte in s that matches one of the bytes in accept,
- * or NULL if no such byte is found
+ * _strstr -  a function that locates a substring.
+ * @haystack: an input string to search in
+ * @needle: an input string to locate into string haystack
+ * Return:  a pointer to the beginning of the located substring,
+ * or NULL if the substring is not found.
  */
 char *_strstr(char *haystack, char *needle)
 {
-	char *start = accept;
+	char *startn = needle, *starth = haystack;
 
 	while (*haystack)
 	{
-		while (*needle)
+		starth = haystack;
+		needle = startn;
+		while (*haystack == *needle)
 		{
-			if (*needle == *haystack)
-				return (haystack);
+			haystack++;
 			needle++;
 		}
 
-		needle = haystack;
-		haystack++;
+		if (*needle == '\0')
+			return (haystack);
+		haystack = starth + 1;
 	}
-	if (*neddle == *haystack)
-		return (haystack);
 	return (NULL);
 }
