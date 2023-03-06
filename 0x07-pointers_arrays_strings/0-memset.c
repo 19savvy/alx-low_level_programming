@@ -5,7 +5,6 @@
  * @s: pointer to the location to be filled
  * @b: byte to fill the location with
  * @n: number of bytes to be filled
- * @start: points to the same location as s
  * @return: returns the location to be filled
  */
 
