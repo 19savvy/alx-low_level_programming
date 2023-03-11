@@ -6,48 +6,45 @@
  * main - A program that prints the minimum number of coins to
  * make change for an amount of money
  * @argc: The arguements' counter
- * @amnt: amount left
- * @coins: number of coins to be given
  * @argv: The argument's values
- * Return: 1 if the number of arguments passed is not exactly 1
+ * Return: 1 if the number of arguments is not exactly 1
  * or 0 in otherwise
  */
 int main(int argc, char **argv)
 {
-	int amnt, coins;
-
+	int coins, amount;
 	coins = 0;
 
 	if (argc == 2)
 	{
-		amnt = atoi(argv[1]);
-		if (amnt < 0)
+		amount = atoi(argv[1]);
+		if (amount < 0)
 		{
 			printf("%d\n", 0);
 			return (0);
 		}
-		if (amnt % 25 >= 0)
+		if (amount % 25 >= 0)
 		{
-			coins += amnt / 25;
-			amnt = amnt % 25;
+			coins += amount / 25;
+			amount = amount % 25;
 		}
-		if (amnt % 10 >= 0)
+		if (amount % 10 >= 0)
 		{
-			coins += amnt / 10;
-			amnt = amnt % 10;
+			coins += amount / 10;
+			amount = amount % 10;
 		}
-		if (amnt % 5 >= 0)
+		if (amount % 5 >= 0)
 		{
-			coins += amnt / 5;
-			amnt = amnt % 5;
+			coins += amount / 5;
+			amount = amount % 5;
 		}
-		if (amnt % 2 >= 0)
+		if (amount % 2 >= 0)
 		{
-			coins += amnt / 2;
-			amnt = amnt % 2;
+			coins += amount / 2;
+			amount = amount % 2;
 		}
-		if (amnt % 1 >= 0)
-			coins += amnt;
+		if (amount % 1 >= 0)
+			coins += amount;
 		printf("%d\n", coins);
 		return (0);
 	}
