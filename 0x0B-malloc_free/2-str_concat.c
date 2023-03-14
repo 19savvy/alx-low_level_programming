@@ -2,42 +2,51 @@
 #include <stdlib.h>
 
 /**
- * _strdup - A function that returns a pointer to a newly allocated
- * space in memory, which contains a copy of the string given as a
- * parameter.
- * @str: An input pointer of the string to copy.
- * Return: Apointer to new string or NULL if it str is NULL
+ * str_concat - A function that concatenates two strings
+ * @s1: An input pointer of the first string
+ * @s2: An input pointer of the second string
+ * Return: Apointer to concatened strings or NULL if it str is NULL
  */
-char *_strdup(char *str)
+char *str_concat(char *s1, char *s2)
 {
-	char *new_str, *start;
-	int i = 0, len = 0;
+	char *new_str, *starts1, *starts2;
+	int i = 0, lens1 = 0, lens2 = 0;
 
-	if (str == NULL)
-		return (NULL);
-
-	start = str;
-
-	while (*str)
+	starts1 = s1;
+	starts2 = s2;
+	if (s1 == NULL)
+		s1 = "";
+	while (*s1)
 	{
-		len++;
-		str++;
+		lens1++;
+		s1++;
 	}
-
-	str = start;
-	new_str = malloc(sizeof(char) * (len + 1));
-	start = new_str;
-
-	if (new_str != NULL)
+	s1 = starts1;
+	if (s2 == NULL)
+		s2 = "";
+	while (*s2)
 	{
-		for (; i < len; i++)
+		lens2++;
+		s2++;
+	}
+	s2 = starts2;
+	new_str = malloc(sizeof(char) * (lens1 + lens2 + 1));
+	starts1 = new_str;
+	if (new_str == NULL)
+		return (NULL);
+	for (; i < (lens1 + lens2); i++)
+	{
+		if (i < lens1)
 		{
-			new_str[i] = *str;
-			str++;
+			new_str[i] = *s1;
+			s1++;
 		}
-		new_str[i] = '\0';
-		return (start);
+		else
+		{
+			new_str[i] = *s2;
+			s2++;
+		}
 	}
-	else
-		return (NULL);
+	new_str[i] = '\0';
+	return (starts1);
 }
