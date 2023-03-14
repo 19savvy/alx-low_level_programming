@@ -2,6 +2,29 @@
 #include <stdlib.h>
 
 /**
+ * count_words - counts the number of words in a string
+ * @str: string to count words in
+ *
+ * Return: number of words in str
+ */
+static int count_words(char *str)
+{
+	int count = 0;
+
+	while (*str)
+	{
+		while (*str == ' ')
+			str++;
+		if (*str != '\0')
+			count++;
+		while (*str && *str != ' ')
+			str++;
+	}
+
+	return (count);
+}
+
+/**
  * strtow - splits a string into words
  * @str: string to split
  *
@@ -11,18 +34,12 @@
 char **strtow(char *str)
 {
 	char **array;
-	int i, j, k, len, count = 0;
+	int i, j, k, len, count;
 
 	if (str == NULL || *str == '\0')
 		return (NULL);
 
-	/* count the number of words in str */
-	for (i = 0; str[i]; i++)
-	{
-		if (str[i] != ' ' && (str[i + 1] == ' ' || str[i + 1] == '\0'))
-			count++;
-	}
-
+	count = count_words(str);
 	if (count == 0)
 		return (NULL);
 
@@ -35,30 +52,26 @@ char **strtow(char *str)
 		if (str[i] == ' ')
 			continue;
 
-		/* find the length of the current word */
 		for (j = i, len = 0; str[j] && str[j] != ' '; j++, len++)
 			;
 
-		/* allocate memory for the word */
 		array[k] = malloc(sizeof(char) * (len + 1));
 		if (array[k] == NULL)
 		{
-			/* free previously allocated memory */
 			for (j = 0; j < k; j++)
 				free(array[j]);
 			free(array);
 			return (NULL);
 		}
 
-		/* copy the current word into the array */
 		for (j = i, len = 0; str[j] && str[j] != ' '; j++, len++)
 			array[k][len] = str[j];
 		array[k][len] = '\0';
 		k++;
-		i = j; /* skip the current word */
+		i = j;
 	}
 
-	array[k] = NULL; /* mark the end of the array */
+	array[k] = NULL;
 	return (array);
 }
 
