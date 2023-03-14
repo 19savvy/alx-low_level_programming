@@ -2,29 +2,6 @@
 #include <stdlib.h>
 
 /**
- * count_words - counts the number of words in a string
- * @str: string to count words in
- *
- * Return: number of words in str
- */
-static int count_words(char *str)
-{
-	int count = 0;
-
-	while (*str)
-	{
-		while (*str == ' ')
-			str++;
-		if (*str != '\0')
-			count++;
-		while (*str && *str != ' ')
-			str++;
-	}
-
-	return (count);
-}
-
-/**
  * strtow - splits a string into words
  * @str: string to split
  *
@@ -39,7 +16,12 @@ char **strtow(char *str)
 	if (str == NULL || *str == '\0')
 		return (NULL);
 
-	count = count_words(str);
+	count = 0;
+	for (i = 0; str[i]; i++)
+	{
+		if (str[i] != ' ' && (i == 0 || str[i - 1] == ' '))
+			count++;
+	}
 	if (count == 0)
 		return (NULL);
 
