@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <cctye>
+#include <ctype.h>
 #include <stdlib.h>
 
 /**
@@ -29,8 +29,11 @@ int main(int argc, char **argv)
 		printf("Error\n");
 		exit(98);
 	}
-	answer = num1 * num2;
-	printf("%d\n", answer);
+	else
+	{
+		answer = num1 * num2;
+		printf("%d\n", answer);
+	}
 
 	return (0);
 }
