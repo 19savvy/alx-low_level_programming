@@ -21,8 +21,10 @@ int main(int argc, char **argv)
 
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[2]);
+	int i = isdigit(num1);
+	int k = isdigit(num2);
 
-	if (!isdigit(num1) && !isdigit(num2))
+	if (i == 0 || k == 0)
 	{
 		printf("Error\n");
 		exit(98);
