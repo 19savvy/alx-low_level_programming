@@ -8,11 +8,11 @@
 
 size_t print_list(const list_t *h)
 {
-	int nodes = 0;
+	unsigned int nodes = 0;
 
 	while (h)
 	{
-		printf("[%d]", h->len);
+		printf("[%u]", h->len);
 		if (h == NULL)
 		{
 			printf("[0] (nil)");
