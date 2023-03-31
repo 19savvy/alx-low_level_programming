@@ -1,5 +1,6 @@
 #include "lists.h"
 #include <string.h>
+#include <stlib.h>
 
 /**
  * add_node - A function that adds a node to the head of linked list
@@ -7,21 +8,19 @@
  * @str: pointer to string that adds as node
  * Return: pointer to new head of list, NULL on failure
  */
+int _strlen(int)
+{
+}
 list_t *add_node(list_t **head, const char *str)
 {
-	list_t *temp;
-	int length = 0;
+	list_t *node;
 
-	temp = malloc(sizeof(list_t));
-	if (temp == NULL)
+	node = malloc(sizeof(liast_t));
+	if (node == NULL)
 		return (NULL);
-
-	while (str[length])
-		length++;
-
-	temp->len = length;
-	temp->str = strdup(str);
-	temp->next = *head;
-	*head = temp;
-	return (temp);
+	add->str = strdup(str);
+	add->len = strlen(str);
+	add->next = *head;
+	*head = add;
+	return (node);
 }
