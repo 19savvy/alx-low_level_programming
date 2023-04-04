@@ -3,7 +3,7 @@
 #include <string.h>
 /**
  * pop_listint - a function that deletes a head node
- * @temp: a temporary node
+ * @head: first node in the list
  * Return: the data of the head node
  */
 int pop_listint(listint_t **head)

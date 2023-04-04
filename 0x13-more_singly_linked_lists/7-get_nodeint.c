@@ -1,9 +1,10 @@
-#include "list.h"
+#include "lists.h"
 #include <stdlib.h>
 /**
  * get_nodeint_at_index - a function that returns a node of a
  * given index
  * @index: the index of the node to be returned
+ * @head: thie first node in the lis
  * Return: the node of the required index
  */
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
@@ -17,7 +18,7 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 	}
 	while (temp != NULL && count < index)
 	{
-		tempt = temp->next;
+		temp = temp->next;
 		count++;
 	}
 	if (count == index && temp != NULL)

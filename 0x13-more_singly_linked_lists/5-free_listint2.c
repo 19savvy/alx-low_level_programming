@@ -2,25 +2,25 @@
 #include <stdlib.h>
 #include <string.h>
 /**
- * free_liastint2 - frees a list and sets its head
+ * free_listint2 - frees a list and sets its head
  * to NULL
- * @temp: a temporary pointer
+ * @head: the first node in the list
  * Return: void
  */
 void free_listint2(listint_t **head)
 {
-	listint_t *temp;
+	listint_t *temp, *next;
 
-	if (head == NULL)
+	if (head == NULL || *head == NULL)
 	{
 		return;
 	}
 	temp = *head;
 	while (temp != NULL)
 	{
-		temp = *head;
-		*head = (*head)->next;
+		next = temp->next;
 		free(temp);
+		temp = next;
 
 	}
 	*head = NULL;
