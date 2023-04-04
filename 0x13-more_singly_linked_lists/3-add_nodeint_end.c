@@ -4,12 +4,14 @@
 /**
  * add_nodeint_end - a function that adds a new node to the end
  * of a list
- * @newNode: the new node to be added
+ * @head: first node of the list
+ * @n: the data
  * Return: the address to the new node
  */
 listint_t *add_nodeint_end(listint_t **head, const int n)
 {
-	listint_t *newNode = (listint_t*)malloc(sizeof(listint_t));
+	listint_t *newNode = (listint_t *)malloc(sizeof(listint_t));
+
 	if (newNode == NULL)
 	{
 		return (NULL);

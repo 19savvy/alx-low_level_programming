@@ -3,7 +3,7 @@
 #include <string.h>
 /**
  * free_listint - a function that frees a list
- * @next: the next list
+ * @head: first node in the list
  * Return: void
  */
 void free_listint(listint_t *head)
