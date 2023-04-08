@@ -14,9 +14,11 @@ unsigned int binary_to_uint(const char *b)
 
 	conv = strtoul(b, &fail, 2);
 
+	if (b == NULL)
+		return (0);
 	for (i = 0; b[i]; i++)
 	{
-		if (b[i] != '1' && b[i] != '0' || b == NULL)
+		if (b[i] !='1' || b[i] != '0')
 		{
 			return (0);
 		}
