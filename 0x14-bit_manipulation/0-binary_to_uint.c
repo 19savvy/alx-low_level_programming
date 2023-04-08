@@ -10,8 +10,9 @@
 unsigned int binary_to_uint(const char *b)
 {
 	unsigned int conv, i;
+	char *fail;
 
-	conv = (unsigned int)b;
+	conv = strtoul(b, &fail, 2);
 	return (conv);
 	for (i = 0; b[i]; i++)
 	{
