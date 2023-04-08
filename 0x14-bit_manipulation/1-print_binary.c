@@ -12,7 +12,7 @@
 
 void print_binary(unsigned long int n)
 {
-	unsigned int temp = 1UL << (sizeof(unsigned long int) * CHAR_BIT - 1);
+	unsigned long int temp = 1UL << (sizeof(unsigned long int) * CHAR_BIT - 1);
 	int leading_zeros = 0;
 	if (n == 0)
 	{
