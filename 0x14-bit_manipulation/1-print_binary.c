@@ -12,8 +12,12 @@
 
 void print_binary(unsigned long int n)
 {
-	unsigned int temp = 1U << (sizeof(int) * CHAR_BIT - 1);
+	unsigned int temp = 1U << (sizeof(unsigned long int) * CHAR_BIT - 1);
 	int leading_zeros = 0;
+	if (n == 0)
+	{
+		putchar('0');
+	}
 
 	while (temp != 0U)
 	{
@@ -28,10 +32,6 @@ void print_binary(unsigned long int n)
 			putchar('1');
 		}
 		temp = temp >> 1;
-	}
-	if (n == 0) 
-	{
-		putchar('0');
 	}
 	putchar('\n');
 }
