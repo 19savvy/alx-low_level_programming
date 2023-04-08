@@ -13,7 +13,7 @@ int get_bit(unsigned long int n, unsigned int index)
 {
 	unsigned int i = 0;
 	unsigned int temp = n;
-	int arr[33];
+	int arr[65];
 
 	while (temp != 0)
 	{
