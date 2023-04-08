@@ -17,18 +17,17 @@ int get_bit(unsigned long int n, unsigned int index)
 
 	while (temp != 0)
 	{
-		arr[i] = temp %2;
+		arr[i] = temp % 2;
 		temp /= 2;
 		i++;
 	}
 	if (index < i)
 	{
-		return(arr[index]);
+		return (arr[index]);
 	}
 	else
 	{
 		return (-1);
 	}
-	
 
 }
