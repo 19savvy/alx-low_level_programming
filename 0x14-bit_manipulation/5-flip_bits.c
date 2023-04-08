@@ -1,12 +1,10 @@
 #include <stddef.h>
 #include <stdlib.h>
-#include <stdio.h>
 /**
- * flip_bits -  a function that returns the number of bits you would 
- * need to flip to get from one number to another.
- * @n: number
- * @m: other number
- * @Return: the number of flips required
+ * flip_bits - A function that returns the number of bits needed to flip
+ * @n: A number
+ * @m: The number to set other equal
+ * Return: The number of fliped bits
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
