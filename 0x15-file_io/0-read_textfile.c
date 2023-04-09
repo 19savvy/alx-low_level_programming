@@ -11,7 +11,7 @@
  * prints it to the POSIX standard output.
  * @filename: the name of the file to be printed
  * @letters: number of letters to be printed
- * @Return: the actual number of letters it could read and print
+ * Return: The number of letters read and printed, or 0 on failure
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
