@@ -5,13 +5,11 @@
 
 /**
  * print_binary - Prints the binary representation of a number.
- * 
+ *
  * This function prints the binary representation of a given
  * unsigned long integer number in standard output.
- * 
+ *
  * @n: The number to be printed in binary format.
- * 
- * @return: None (void).
  */
 
 void print_binary(unsigned long int n)
