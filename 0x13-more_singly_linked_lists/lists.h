@@ -20,6 +20,8 @@ size_t listint_len(const listint_t *h);
 int contains_node(const listint_t **list, size_t size, const listint_t *node);
 listint_t *add_nodeint(listint_t **head, const int n);
 listint_t *add_nodeint_end(listint_t **head, const int n);
+listint_t **reallocateArray(listint_t **arr, size_t size, listint_t *newNode);
+int containsNode(listint_t **arr, size_t size, listint_t *node);
 void free_listint(listint_t *head);
 void free_listint2(listint_t **head);
 int pop_listint(listint_t **head);
