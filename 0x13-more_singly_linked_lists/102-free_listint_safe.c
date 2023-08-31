@@ -13,31 +13,31 @@ listint_t **reallocateArray(listint_t **arr, size_t size, listint_t *newNode);
 
 size_t free_listint_safe(listint_t **head)
 {
-    size_t count = 0;
-    listint_t **arr = NULL;
-    listint_t *nextNode;
+	size_t count = 0;
+	listint_t **arr = NULL;
+	listint_t *nextNode;
 
-    if (!head || !(*head))
-        return (count);
+	if (!head || !(*head))
+		return (count);
 
-    while (*head)
-    {
-        if (containsNode(arr, count, *head))
-        {
-            *head = NULL;
-            free(arr);
-            return (count);
-        }
+	while (*head)
+	{
+		if (containsNode(arr, count, *head))
+		{
+			*head = NULL;
+			free(arr);
+			return (count);
+		}
 
-        count++;
-        arr = reallocateArray(arr, count, *head);
-        nextNode = (*head)->next;
-        free(*head);
-        *head = nextNode;
-    }
+		count++;
+		arr = reallocateArray(arr, count, *head);
+		nextNode = (*head)->next;
+		free(*head);
+		*head = nextNode;
+	}
 
-    free(arr);
-    return (count);
+	free(arr);
+	return (count);
 }
 
 /**
@@ -53,23 +53,23 @@ size_t free_listint_safe(listint_t **head)
 
 listint_t **reallocateArray(listint_t **arr, size_t size, listint_t *newNode)
 {
-    listint_t **newArr;
-    size_t i;
+	listint_t **newArr;
+	size_t i;
 
-    newArr = malloc(size * sizeof(listint_t *));
-    if (!newArr)
-    {
-        free(arr);
-        exit(98);
-    }
+	newArr = malloc(size * sizeof(listint_t *));
+	if (!newArr)
+	{
+		free(arr);
+		exit(98);
+	}
 
-    for (i = 0; i < size - 1; i++)
-        newArr[i] = arr[i];
+	for (i = 0; i < size - 1; i++)
+		newArr[i] = arr[i];
 
-    newArr[i] = newNode;
-    free(arr);
+	newArr[i] = newNode;
+	free(arr);
 
-    return (newArr);
+	return (newArr);
 }
 
 /**
@@ -82,14 +82,14 @@ listint_t **reallocateArray(listint_t **arr, size_t size, listint_t *newNode)
  */
 int containsNode(listint_t **arr, size_t size, listint_t *node)
 {
-    size_t i;
+	size_t i;
 
-    for (i = 0; i < size; i++)
-    {
-        if (arr[i] == node)
-            return (1);
-    }
+	for (i = 0; i < size; i++)
+	{
+		if (arr[i] == node)
+			return (1);
+	}
 
-    return (0);
+	return (0);
 }
 
